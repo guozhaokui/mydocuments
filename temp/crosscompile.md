@@ -23,3 +23,42 @@ gcc和libc的模块和关系：
 
 ##configure
 ```--target= ```是目标系统。编译的结果也会以这个开头？
+
+
+##过程
+```bash
+checking host system type... Invalid configuration `aarch64-linux-android': machine `aarch64' not recognized
+configure: error: /bin/sh ./config.sub aarch64-linux-android failed
+
+```
+/usr/share/automake-1.13/config.sub中有aarch64啊
+
+http://git.savannah.gnu.org/gitweb/?p=config.git;a=tree
+到这里更新一下
+
+
+##toolchain和abi的对应关系
+  aarch64-linux-android-4.9:  arm64-v8a
+  aarch64-linux-android-clang3.4:  arm64-v8a
+ aarch64-linux-android-clang3.5:  arm64-v8a
+arm-linux-androideabi-4.6:  armeabi armeabi-v7a armeabi-v7a-hard
+arm-linux-androideabi-4.8:  armeabi armeabi-v7a armeabi-v7a-hard
+arm-linux-androideabi-4.9:  armeabi armeabi-v7a armeabi-v7a-hard
+arm-linux-androideabi-clang3.4:  armeabi armeabi-v7a armeabi-v7a-hard
+arm-linux-androideabi-clang3.5:  armeabi armeabi-v7a armeabi-v7a-hard
+mips64el-linux-android-4.9:  mips64
+mips64el-linux-android-clang3.4:  mips64
+mips64el-linux-android-clang3.5:  mips64
+mipsel-linux-android-4.6:  mips
+mipsel-linux-android-4.8:  mips
+mipsel-linux-android-4.9:  mips
+mipsel-linux-android-clang3.4:  mips
+mipsel-linux-android-clang3.5:  mips
+x86-4.6:  x86
+x86-4.8:  x86
+x86-4.9:  x86
+x86-clang3.4:  x86
+x86-clang3.5:  x86
+x86_64-4.9:  x86_64
+x86_64-clang3.4:  x86_64
+x86_64-clang3.5:  x86_64
