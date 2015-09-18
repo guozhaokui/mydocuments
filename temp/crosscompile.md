@@ -32,15 +32,16 @@ configure: error: /bin/sh ./config.sub aarch64-linux-android failed
 
 ```
 /usr/share/automake-1.13/config.sub中有aarch64啊
+是freetype自己的configure不认识aarch64
 
 http://git.savannah.gnu.org/gitweb/?p=config.git;a=tree
 到这里更新一下
 
 
 ##toolchain和abi的对应关系
-  aarch64-linux-android-4.9:  arm64-v8a
-  aarch64-linux-android-clang3.4:  arm64-v8a
- aarch64-linux-android-clang3.5:  arm64-v8a
+aarch64-linux-android-4.9:  arm64-v8a
+aarch64-linux-android-clang3.4:  arm64-v8a
+aarch64-linux-android-clang3.5:  arm64-v8a
 arm-linux-androideabi-4.6:  armeabi armeabi-v7a armeabi-v7a-hard
 arm-linux-androideabi-4.8:  armeabi armeabi-v7a armeabi-v7a-hard
 arm-linux-androideabi-4.9:  armeabi armeabi-v7a armeabi-v7a-hard
