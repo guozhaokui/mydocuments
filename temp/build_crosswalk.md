@@ -11,15 +11,16 @@ docker run -it -v /home/layabox/crosswalk:/opt/crosswalk  walkcross_ubuntu /bin/
     
 
 #  下载（要翻墙）
-按照文档。很慢很慢的。我是在win10下翻墙，然后用自带的linux下载的。  
-不知道为什么下载完编译的时候发现缺几个库，需要单独下载然后拷贝到相应目录（翻墙）
-1. third_party/custom_tabs_client  
+按照文档来。很慢很慢的。我是在win10下翻墙，然后用自带的linux下载的。  
+不知道为什么下载完编译的时候发现缺几个库，需要单独下载然后拷贝到相应目录（翻墙） 
+
+* third_party/custom_tabs_client  
     https://chromium.googlesource.com/external/github.com/GoogleChrome/custom-tabs-client  
-2. third_party/findbugs    
+* third_party/findbugs    
     https://chromium.googlesource.com/chromium/deps/findbugs
-3. jsr-305  
+* jsr-305  
     这个项目已经很久没人维护了，googlecode上的版本库也没了，需要自己从googlecode的备份中找一个出来。也不知道有什么用。
-3. android 开发环境  
+* android 开发环境  
     android_tools/sdk  
     android_tools/ndk
     缺什么下什么。但是都有了之后，gn依然会报错
@@ -79,7 +80,7 @@ fb6e871bf0e7c4f5212bdc814956047b542dff5c
 
 先 ninja -C out/Default xwalk
     这个生成要给xwalk的可执行文件。
-再 ninja -C out/Default xwalk_core_library  
+再 ninja -C out/Default xwalk_core_library  (*可能不用这个*)
     这个可以生成xwalk的webview。在 out/Default/xwalk_core_library目录下。
 
 # docker相关
