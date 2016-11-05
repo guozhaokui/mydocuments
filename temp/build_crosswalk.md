@@ -79,7 +79,7 @@ fb6e871bf0e7c4f5212bdc814956047b542dff5c
 
 2. 先 ninja -C out/Default xwalk
     这个生成一个xwalk的可执行文件。
-3. 再 ninja -C out/Default xwalk_core_library  (*可能不用这个*)
+3. 再 ninja -C out/Default xwalk_core_library 
     这个可以生成xwalk的webview。在 out/Default/xwalk_core_library目录下。
 
 # docker相关
