@@ -60,8 +60,8 @@ fb6e871bf0e7c4f5212bdc814956047b542dff5c
 
     大约需要下载1个多G。
 
-* 需要修改 src/BUILD.gnw文件，否则 xwalk编译不过（不知道）
-    在280行
+* 需要修改 src/xwalk/BUILD.gn文件，否则 xwalk编译不过（不知道）
+    在280行(410行?)
     ``` 
         if (is_android) {
             deps += [
